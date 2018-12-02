@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -140,3 +141,17 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
   messages.ERROR: 'danger'
 }
+
+# Email Config
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'jpogge55@gmail.com'
+"""
+The password below is an application-specific password.
+It is required because 2-step authentication is enabled on the relevant Google account.
+From the Google help page:
+"App passwords let you sign in to your Google Account
+from apps on devices that don't support 2-Step Verification."
+"""
+EMAIL_HOST_PASSWORD = 'hcjasrfdkurplgnw'
+EMAIL_USE_TLS=True
