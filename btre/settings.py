@@ -155,3 +155,8 @@ from apps on devices that don't support 2-Step Verification."
 """
 EMAIL_HOST_PASSWORD = 'hcjasrfdkurplgnw'
 EMAIL_USE_TLS=True
+
+try:
+  from .local_settings import *
+except ImportError:
+  pass
